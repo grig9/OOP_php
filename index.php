@@ -1,13 +1,12 @@
 <?php
-  // 1. соединение с БД
-  // 2. формируем запрос и выполним его
-  // 3. получаем ассоциативный массив
-  // 4. выводим массив с помощью foreach()
-
   include "functions.php";
+  include "./database/QueryBuilder.php";
 
-  $posts = getAllPosts(); 
-  
+  $pdo = connect_to_database();
+  $db = new QueryBuilder($pdo);
+
+  $posts = $db->getAll();
+
   include "index.view.php";
   
 ;?>
