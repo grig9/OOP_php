@@ -26,20 +26,24 @@
   <div class="container offset-md-3">
     <div class="row">
       <div class="col-md-8">
-        <a href="add.php" class="btn btn-success">Add post</a>
+        <a href="add.php" class="btn btn-success">Add books</a>
         <table class="table">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Price</th>
               <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>
-            <?php foreach($posts as $post) : ?>
+            <?php foreach($books as $book) : ?>
               <tr>
-                <th scope="row"><?= $post['id'] ;?></th>
-                <td><?= $post['title'] ;?></td>
+                <td scope="row"><?= $book['id'] ;?></td>
+                <td class="text-capitalize"><?= $book['title'] ;?></td>
+                <td class="text-capitalize"><?= $book['author'] ;?></td>
+                <td class="fw-bold"><?= $book['price'] ;?></td>
                 <td>
                   <a href="edit.php" class="btn btn-warning">Edit</a>
                   <a href="delete.php" class="btn btn-danger">Delete</a>

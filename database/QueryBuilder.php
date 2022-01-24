@@ -8,7 +8,7 @@ class QueryBuilder {
   }
 
   public function getAll() {
-    $sql = "SELECT * FROM posts";
+    $sql = "SELECT * FROM books";
     $statement = $this->pdo->prepare($sql);
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);

@@ -2,7 +2,7 @@
   include "functions.php";
   $db = include "./database/start.php";
 
-  $posts = $db->getAll();
+  $books = $db->getAll();
 
   include "index.view.php";
   
