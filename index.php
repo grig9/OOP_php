@@ -1,9 +1,6 @@
 <?php
   include "functions.php";
-  include "./database/QueryBuilder.php";
-
-  $pdo = connect_to_database();
-  $db = new QueryBuilder($pdo);
+  $db = include "./database/start.php";
 
   $posts = $db->getAll();
 
