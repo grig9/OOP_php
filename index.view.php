@@ -25,7 +25,7 @@
   
   <div class="container offset-md-3">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 my-3">
         <a href="add.php" class="btn btn-success">Add books</a>
         <table class="table">
           <thead>
