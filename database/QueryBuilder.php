@@ -16,6 +16,14 @@ class QueryBuilder {
     return $statement->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function getOne($table, $id) 
+  {
+    $sql = "SELECT * FROM {$table} WHERE id = ?";
+    $statement = $this->pdo->prepare($sql);
+    $statement->execute([$id]);
+    return $statement->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function create($table, $data) 
   {
     $keys = implode(',', array_keys($data));

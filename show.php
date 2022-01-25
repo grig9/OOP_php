@@ -1,3 +1,8 @@
+<?php
+$db = include "./database/start.php";
+$book = $db->getOne('books', $_GET['id']);
+;?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <title>My book store</title>
+  <title>Show</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,36 +27,14 @@
       </div>
     </div>
   </nav>
-  
-  <div class="container offset-md-3">
+  <div class="container">
     <div class="row">
-      <div class="col-md-8 my-3">
-        <a href="create.php" class="btn btn-success">Add book</a>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Title</th>
-              <th scope="col">Author</th>
-              <th scope="col">Price</th>
-              <th scope="col">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach($books as $book) : ?>
-              <tr>
-                <td scope="row"><?= $book['id'] ;?></td>
-                <td class="text-capitalize"><a href="./show.php?id=<?= $book['id'] ;?>"><?= $book['title'] ;?></a></td>
-                <td class="text-capitalize"><?= $book['author'] ;?></td>
-                <td class="fw-bold"><?= $book['price'] ;?></td>
-                <td>
-                  <a href="edit.php" class="btn btn-warning">Edit</a>
-                  <a href="delete.php" class="btn btn-danger">Delete</a>
-                </td>
-              </tr>
-            <?php endforeach ;?>
-          </tbody>
-        </table>
+      <div class="col-md-10 mx-auto">
+        <h1 class="text-capitalize text-center"><?= $book['title'] ;?></h1>
+        <p class="mt-3">
+          <span class="ms-4"></span>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ab aperiam sint iure perferendis, consequatur facere, porro distinctio veritatis laboriosam itaque quam, necessitatibus quos corporis incidunt aut sunt consequuntur? Dolorum.
+        </p>
       </div>
     </div>
   </div>
