@@ -45,8 +45,8 @@
                 <td class="text-capitalize"><?= $book['author'] ;?></td>
                 <td class="fw-bold"><?= $book['price'] ;?></td>
                 <td>
-                  <a href="edit.php" class="btn btn-warning">Edit</a>
-                  <a href="delete.php" class="btn btn-danger">Delete</a>
+                  <a href="edit.php?id=<?= $book['id'] ;?>" class="btn btn-warning">Edit</a>
+                  <a href="delete.php?id=<?= $book['id'] ;?>" class="btn btn-danger" onclick="return confirm('are you sure')">Delete</a>
                 </td>
               </tr>
             <?php endforeach ;?>
