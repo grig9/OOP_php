@@ -55,7 +55,8 @@ class QueryBuilder
     $sth->execute($insert->getBindValues());
   }
 
-  public function updateById($table, $data, $id) {
+  public function updateById($table, $data, $id) 
+  {
     $update = $this->queryFactory->newUpdate();
 
     $update
@@ -69,7 +70,8 @@ class QueryBuilder
     $sth->execute($update->getBindValues());
   }
 
-  public function deleteById($table, $id) {
+  public function deleteById($table, $id) 
+  {
     $delete = $this->queryFactory->newDelete();
 
     $delete

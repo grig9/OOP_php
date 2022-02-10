@@ -1,11 +1,16 @@
 <?php
+// Start a Session
+if( !session_id() ) @session_start();
 
 require '../vendor/autoload.php';
+
+flash()->message('Hot!');
 
 $routes = [
   "/" => 'controllers/homepage.php',
   "/about" => 'controllers/about.php',
   "/contacts" => 'controllers/contacts.php',
+  "/create" => 'controllers/create.php',
 ];
 
 $route = $_SERVER['REQUEST_URI'];

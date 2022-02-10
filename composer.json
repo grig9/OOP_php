@@ -1,6 +1,8 @@
 {
   "require": {
-    "aura/sqlquery": "2.7.1"
+    "aura/sqlquery": "2.7.1",
+    "league/plates": "^3.4",
+    "tamtamchik/simple-flash": "^2.0"
   },
 
   "autoload": {
@@ -8,5 +10,8 @@
       "App\\": "app/",
       "DataBase\\": "database/"
     }
+  },
+  "require-dev": {
+    "kint-php/kint": "^4.1"
   }
 }

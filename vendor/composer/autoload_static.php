@@ -6,7 +6,24 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit2c89058931c6c46ce8aba7e11e09aeb2
 {
+    public static $files = array (
+        '3917c79c5052b270641b5a200963dbc2' => __DIR__ . '/..' . '/kint-php/kint/init.php',
+        '6157b075b923803e5ef157aeb43b83bd' => __DIR__ . '/..' . '/tamtamchik/simple-flash/src/function.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Tamtamchik\\SimpleFlash\\' => 23,
+        ),
+        'L' => 
+        array (
+            'League\\Plates\\' => 14,
+        ),
+        'K' => 
+        array (
+            'Kint\\' => 5,
+        ),
         'D' => 
         array (
             'DataBase\\' => 9,
@@ -19,6 +36,18 @@ class ComposerStaticInit2c89058931c6c46ce8aba7e11e09aeb2
     );
 
     public static $prefixDirsPsr4 = array (
+        'Tamtamchik\\SimpleFlash\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tamtamchik/simple-flash/src',
+        ),
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
+        ),
+        'Kint\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kint-php/kint/src',
+        ),
         'DataBase\\' => 
         array (
             0 => __DIR__ . '/../..' . '/database',
