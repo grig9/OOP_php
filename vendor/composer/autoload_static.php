@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit2c89058931c6c46ce8aba7e11e09aeb2
 {
     public static $prefixLengthsPsr4 = array (
+        'D' => 
+        array (
+            'DataBase\\' => 9,
+        ),
         'A' => 
         array (
             'Aura\\SqlQuery\\' => 14,
@@ -15,6 +19,10 @@ class ComposerStaticInit2c89058931c6c46ce8aba7e11e09aeb2
     );
 
     public static $prefixDirsPsr4 = array (
+        'DataBase\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/database',
+        ),
         'Aura\\SqlQuery\\' => 
         array (
             0 => __DIR__ . '/..' . '/aura/sqlquery/src',

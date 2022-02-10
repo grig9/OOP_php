@@ -1,6 +1,8 @@
 <?php
-$db = include "./database/start.php";
-$book = $db->getOne('books', $_GET['id']);
+
+$db = include __DIR__ . "/database/start.php";
+
+$book = $db->getOneById('books', $_GET['id']);
 ;?>
 
 <!DOCTYPE html>

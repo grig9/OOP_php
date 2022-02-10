@@ -1,8 +1,9 @@
 <?php
-$config = include __DIR__ . "/../config.php";
-include __DIR__ . "/../database/QueryBuilder.php";
-include __DIR__ . "/../database/Connection.php";
+require __DIR__ . "/../vendor/autoload.php";
 
-return new QueryBuilder(
-  Connection::make($config['database'])
-);
+use App\QueryBuilder;
+use DataBase\Connection;
+
+$config = include __DIR__ . "/config.php"; 
+
+return new QueryBuilder(Connection::make($config['database']));
