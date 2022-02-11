@@ -9,7 +9,8 @@ class QueryBuilder
   private $pdo;
   private $queryFactory;
 
-  public function __construct($pdo) {
+  public function __construct($pdo) 
+  {
     $this->pdo = $pdo;
     $this->queryFactory = new QueryFactory('mysql');
   }
@@ -47,7 +48,7 @@ class QueryBuilder
     $insert = $this->queryFactory->newInsert();
 
     $insert
-        ->into($table)                   // INTO this table
+        ->into($table)                   
         ->cols($data);
 
     $sth = $this->pdo->prepare($insert->getStatement());

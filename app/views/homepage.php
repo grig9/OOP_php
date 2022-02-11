@@ -8,7 +8,7 @@
   </div>
   <div class="row">
     <div class="col mt-5">
-      <a href="/create" class="btn btn-success">Add book</a>
+      <a href="/add/book" class="btn btn-success">Add book</a>
       <table class="table">
         <thead>
           <tr>
@@ -23,7 +23,7 @@
           <?php foreach($books as $book): ?>
             <tr>
               <td scope="row"><?= $book['id'] ;?></td>
-              <td class="text-capitalize"><a href="/show.php?id=<?= $book['id'] ;?>"><?= $book['title'] ;?></a></td>
+              <td class="text-capitalize"><a href="/show/<?= $book['id'] ;?>"><?= $book['title'] ;?></a></td>
               <td class="text-capitalize"><?= $book['author'] ;?></td>
               <td class="fw-bold"><?= $book['price'] ;?></td>
               <td>

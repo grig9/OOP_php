@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'ea327365dc492887dd903a1e09550882b62a8519',
+        'reference' => '5447d43acccb9f0c319d80536b3919314bbc814a',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'ea327365dc492887dd903a1e09550882b62a8519',
+            'reference' => '5447d43acccb9f0c319d80536b3919314bbc814a',
             'dev_requirement' => false,
         ),
         'aura/sqlquery' => array(
@@ -44,6 +44,15 @@
             'install_path' => __DIR__ . '/../league/plates',
             'aliases' => array(),
             'reference' => '6d3ee31199b536a4e003b34a356ca20f6f75496a',
+            'dev_requirement' => false,
+        ),
+        'nikic/fast-route' => array(
+            'pretty_version' => 'v1.3.0',
+            'version' => '1.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nikic/fast-route',
+            'aliases' => array(),
+            'reference' => '181d480e08d9476e61381e04a71b34dc0432e812',
             'dev_requirement' => false,
         ),
         'tamtamchik/simple-flash' => array(
