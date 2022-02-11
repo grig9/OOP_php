@@ -1,12 +1,14 @@
-<?php $this->layout('layout', ['title' => 'Create']) ?>
+<!-- Layout  start-->
+<?php $this->layout('layout', ['title' => 'Create']);?>
+<!-- Layout end -->
 
 <div class="container">
     <div class="row">
       <div class="col-md-8 mt-2 mx-auto">
         <h1 class="col-md text-center">
-          <?php echo $this->e($h1) ;?>
+          <?=$this->e($title);?>
         </h1>
-        <form action="store.php" method="POST">
+        <form action="/store" method="POST">
           <div class="mb-3">
             <label for="title" class="form-label">Title of the book</label>
             <input type="text" class="form-control" name="title" id="title">

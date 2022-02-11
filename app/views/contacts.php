@@ -1,4 +1,6 @@
-<?php $this->layout('layout', ['title' => 'Contacts']) ?>
+<!-- Layout  start-->
+<?php $this->layout('layout', ['title' => 'Contacts']);?>
+<!-- Layout end -->
 
 <div class="container">
     <div class="row">

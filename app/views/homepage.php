@@ -1,17 +1,12 @@
-<?php 
-$db = include __DIR__ . "/../../database/start.php";
-
-$books = $db->getAll('books');
-
-;?>
-
+<!-- Layout  start-->
 <?php $this->layout('layout', ['title' => 'Home page']) ?>
+<!-- Layout end -->
 
 <div class="container">
     <div class="row">
       <div class="col-md-8 mt-2 mx-auto">
           <h1 class="col-md text-center">
-            <?php echo $this->e($descripton) ;?>
+            <?=$this->e($title)?>
           </h1>
       </div>
     </div>
@@ -29,10 +24,10 @@ $books = $db->getAll('books');
             </tr>
           </thead>
           <tbody>
-            <?php foreach($books as $book) : ?>
+            <?php foreach($books as $book): ?>
               <tr>
                 <td scope="row"><?= $book['id'] ;?></td>
-                <td class="text-capitalize"><a href="./show.php?id=<?= $book['id'] ;?>"><?= $book['title'] ;?></a></td>
+                <td class="text-capitalize"><a href="/show.php?id=<?= $book['id'] ;?>"><?= $book['title'] ;?></a></td>
                 <td class="text-capitalize"><?= $book['author'] ;?></td>
                 <td class="fw-bold"><?= $book['price'] ;?></td>
                 <td>
