@@ -20,7 +20,7 @@
               <a class="nav-link active" aria-current="page" href="/">HomePage</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/about">About us</a>
+              <a class="nav-link active" aria-current="page" href="/about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/contacts">Contacts</a>
@@ -28,7 +28,17 @@
         </div>
       </div>
     </nav>
-
+ 
     <?=$this->section('content')?>
+
+    <footer class="fixed-bottom bg-light">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col my-3">
+              <h2 class="text-center">Footer</h2>
+            </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

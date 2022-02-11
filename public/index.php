@@ -8,9 +8,7 @@ $routes = [
   "/" => 'controllers/homepage.php',
   "/about" => 'controllers/about.php',
   "/contacts" => 'controllers/contacts.php',
-  "/create" => 'controllers/create.php',
-  "/show" => 'controllers/show.php',
-  "/create" => 'controllers/create.php',
+  "/blog" => 'controllers/blog.php',
 ];
 
 $route = $_SERVER['REQUEST_URI'];

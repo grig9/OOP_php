@@ -24,10 +24,6 @@ class ComposerStaticInit2c89058931c6c46ce8aba7e11e09aeb2
         array (
             'Kint\\' => 5,
         ),
-        'D' => 
-        array (
-            'DataBase\\' => 9,
-        ),
         'A' => 
         array (
             'Aura\\SqlQuery\\' => 14,
@@ -47,10 +43,6 @@ class ComposerStaticInit2c89058931c6c46ce8aba7e11e09aeb2
         'Kint\\' => 
         array (
             0 => __DIR__ . '/..' . '/kint-php/kint/src',
-        ),
-        'DataBase\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/database',
         ),
         'Aura\\SqlQuery\\' => 
         array (

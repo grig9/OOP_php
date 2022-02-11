@@ -5,8 +5,8 @@ $templates = new Engine('../app/views');
 
 echo $templates->render('page_template', 
   [
-    'heading' => 'About us',
-    'title' => 'About',
+    'heading' => 'This is a contacts page',
+    'title' => 'Contacts',
     'content' => 'Some text'
   ]
 );
