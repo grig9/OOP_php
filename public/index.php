@@ -4,8 +4,6 @@ if( !session_id() ) @session_start();
 
 require '../vendor/autoload.php';
 
-flash()->message('Hot!');
-
 $routes = [
   "/" => 'controllers/homepage.php',
   "/about" => 'controllers/about.php',
