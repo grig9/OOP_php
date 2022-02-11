@@ -9,8 +9,7 @@ $result = $db->getAll('books');
 
 echo $templates->render('homepage', 
   [
-    'heading' => 'This is a book store',
-    'title' => 'Homepage',
+    'title' => 'This is a book store',
     'books' => $result,
   ] 
 );

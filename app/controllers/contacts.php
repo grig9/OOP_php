@@ -3,10 +3,8 @@
 use League\Plates\Engine;
 $templates = new Engine('../app/views');
 
-echo $templates->render('page_template', 
+echo $templates->render('contacts', 
   [
-    'heading' => 'This is a contacts page',
-    'title' => 'Contacts',
-    'content' => 'Some text'
+    'title' => 'This is a contacts page',
   ]
 );
