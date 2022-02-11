@@ -1,5 +1,8 @@
 <?php $this->layout('layout_second', ['title' => $title, 'heading' => $heading]) ?>
 
+
+<?php d($books); ?>
+
 <a href="/create" class="btn btn-success mt-2">Add book</a>
 <table class="table">
   <thead>
