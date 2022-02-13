@@ -4,17 +4,18 @@ if( !session_id() ) @session_start();
 
 require '../vendor/autoload.php';
 
-include( __DIR__ . '/../app/controllers/controller.php');
-
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
-  $r->addRoute('GET', '/', 'homepage_handler');
-  $r->addRoute('GET', '/about', 'about_handler');
-  $r->addRoute('GET', '/contacts', 'contacts_handler');
-  $r->addRoute('GET', '/add/book', 'add_book_handler');
+  $r->addRoute('GET', '/', ['App\controllers\HomeController', 'index']);
+  $r->addRoute('GET', '/about', ['App\controllers\HomeController', 'about']);
+  $r->addRoute('GET', '/contacts', ['App\controllers\HomeController', 'contacts']);
+  $r->addRoute('GET', '/add/book', ['App\controllers\HomeController', 'add_book']);
   
-  $r->addRoute('POST', '/create/book', 'create_handler');
+  $r->addRoute('POST', '/create/book', ['App\controllers\HomeController', 'create']);
   // {id} must be a number (\d+)
-  $r->addRoute('GET', '/show/{id:\d+}', 'show_handler');
+  $r->addRoute('GET', '/show/{id:\d+}', ['App\controllers\HomeController', 'show']);
+  $r->addRoute('GET', '/delete/book/{id:\d+}', ['App\controllers\HomeController', 'delete_by_id']);
+  $r->addRoute('GET', '/edit/book/{id:\d+}', ['App\controllers\HomeController', 'edit_book']);
+  $r->addRoute('POST', '/update/book/{id:\d+}', ['App\controllers\HomeController', 'update_by_id']);
   // The /{title} suffix is optional
   $r->addRoute('GET', '/articles/{id:\d+}[/{title}]', 'get_article_handler');
 });
@@ -44,6 +45,7 @@ switch ($routeInfo[0]) {
       $handler = $routeInfo[1];
       $vars = $routeInfo[2];
       // ... call $handler with $vars
-      call_user_func($handler, $vars);
+      $controller = new $handler[0]();
+      call_user_func([$controller, $handler[1]], $vars);
       break;
 }

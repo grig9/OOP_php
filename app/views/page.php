@@ -1,9 +1,9 @@
-<?php $this->layout('layout', ['title' => 'Show']) ?>
+<?php $this->layout('layout', ['title' => $title]) ?>
 
 <div class="container">
   <div class="row">
     <div class="col mt-3">
-      <h1 class="text-center text-capitalize"><?=$this->e($title)?></h1>
+      <h1 class="text-center"><?=$this->e($title)?></h1>
     </div>
   </div>
   <div class="row">
