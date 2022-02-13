@@ -3,7 +3,7 @@
 return [
 
   "database" => [
-    "database" => "lesson_php",
+    "database" => "app",
     "username" => "root",
     "password" => "",
     "connection" => "mysql:host=localhost",

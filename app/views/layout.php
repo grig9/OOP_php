@@ -25,6 +25,16 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/contacts">Contacts</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/registration/form">Registration</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mx-5">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/login/form">Login</a>
+            </li>
+          </ul>
+          
         </div>
       </div>
     </nav>

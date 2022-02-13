@@ -1,5 +1,7 @@
 <?php $this->layout('layout', ['title' => 'HomePage']) ?>
 
+
+
 <div class="container">
   <div class="row">
     <div class="col mt-3">

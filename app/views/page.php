@@ -1,5 +1,14 @@
 <?php $this->layout('layout', ['title' => $title]) ?>
 
+<?php
+
+if(!empty($_SESSION['flash_messages'])) {
+  echo flash()->display('error');
+}
+
+;?>
+
+
 <div class="container">
   <div class="row">
     <div class="col mt-3">

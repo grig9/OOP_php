@@ -9,7 +9,14 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   $r->addRoute('GET', '/about', ['App\controllers\HomeController', 'about']);
   $r->addRoute('GET', '/contacts', ['App\controllers\HomeController', 'contacts']);
   $r->addRoute('GET', '/add/book', ['App\controllers\HomeController', 'add_book']);
+  $r->addRoute('GET', '/registration/form', ['App\controllers\HomeController', 'registration_form']);
+
+  $r->addRoute('POST', '/registration', ['App\controllers\HomeController', 'registration']);
+  $r->addRoute('GET', '/verification', ['App\controllers\HomeController', 'email_verification']);
+  $r->addRoute('GET', '/login/form', ['App\controllers\HomeController', 'login_form']);
+  $r->addRoute('POST', '/login', ['App\controllers\HomeController', 'login']);
   
+
   $r->addRoute('POST', '/create/book', ['App\controllers\HomeController', 'create']);
   // {id} must be a number (\d+)
   $r->addRoute('GET', '/show/{id:\d+}', ['App\controllers\HomeController', 'show']);
