@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'f3c9986d64c063fce9b7a016112e29cc15bc68f8',
+        'reference' => 'f73df2b74825bc212bd9ff4b5a28722b265844ec',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'f3c9986d64c063fce9b7a016112e29cc15bc68f8',
+            'reference' => 'f73df2b74825bc212bd9ff4b5a28722b265844ec',
             'dev_requirement' => false,
         ),
         'aura/sqlquery' => array(
@@ -80,6 +80,15 @@
             'install_path' => __DIR__ . '/../doctrine/inflector',
             'aliases' => array(),
             'reference' => '8b7ff3e4b7de6b2c84da85637b59fd2880ecaa89',
+            'dev_requirement' => false,
+        ),
+        'eoghanobrien/php-simple-mail' => array(
+            'pretty_version' => '1.7.1',
+            'version' => '1.7.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../eoghanobrien/php-simple-mail',
+            'aliases' => array(),
+            'reference' => '9b8d4c01c7c0cac769ba42ccd08a73ecee855825',
             'dev_requirement' => false,
         ),
         'illuminate/collections' => array(

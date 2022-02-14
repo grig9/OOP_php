@@ -123,20 +123,20 @@ class HomeController
     );
   }
 
-  public function about($params) 
+  public function about() 
   {
-    // try 
-    // {
-    //   $this->test($params['amount']);
-    // } 
-    // catch (NotEnoughMoneyException $excepiton) 
-    // {
-    //   flash()->error('Ваш баланс меньше чем ' . $params['amount']);
-    // }
-    //  catch (AccountIsBlockException $excepiton) 
-    // {
-    //   flash()->error($excepiton->getMessage());
-    // }
+    try 
+    {
+      $this->test(105);
+    } 
+    catch (NotEnoughMoneyException $excepiton) 
+    {
+      flash()->error('Ваш баланс меньше чем 105' );
+    }
+     catch (AccountIsBlockException $excepiton) 
+    {
+      flash()->error($excepiton->getMessage());
+    }
 
     echo $this->templates->render('page', 
       [
@@ -148,7 +148,7 @@ class HomeController
   function test($amount = 1) {
     $start = 100;
 
-    throw new AccountIsBlockException('Your account is blocked');
+    // throw new AccountIsBlockException('Your account is blocked');
   
     if($amount > $start) {
       throw new NotEnoughMoneyException('Your balance is less than '. $amount);

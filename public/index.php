@@ -4,6 +4,25 @@ if( !session_id() ) @session_start();
 
 require '../vendor/autoload.php';
 
+
+$email = "test@.mailtrap.io";
+$name = 'Sasha';
+
+$fromEmail = 'info@.mailtrap.io';
+$fromName = 'Admin';
+
+$subject = 'Офигенская тема';
+$message = 'Привет, это тестовая страница';
+
+d(SimpleMail::make()
+->setTo($email, $name)
+->setSubject($subject)
+->setMessage($message)
+->send());
+die;
+
+
+
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
   $r->addRoute('GET', '/', ['App\controllers\HomeController', 'index']);
   $r->addRoute('GET', '/about', ['App\controllers\HomeController', 'about']);

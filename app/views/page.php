@@ -2,8 +2,8 @@
 
 <?php
 
-if(!empty($_SESSION['flash_messages'])) {
-  echo flash()->display('error');
+if(isset($_SESSION['flash_messages']) && !empty($_SESSION['flash_messages'])) {
+  echo flash()->display();
 }
 
 ;?>
