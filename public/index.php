@@ -5,21 +5,24 @@ if( !session_id() ) @session_start();
 require '../vendor/autoload.php';
 
 
-$email = "test@.mailtrap.io";
-$name = 'Sasha';
+// d(mail('example1111@gmail.com', 'My Subject', 'My message'));die;
 
-$fromEmail = 'info@.mailtrap.io';
-$fromName = 'Admin';
 
-$subject = 'Офигенская тема';
-$message = 'Привет, это тестовая страница';
+// $email = "test@.mailtrap.io";
+// $name = 'Sasha';
 
-d(SimpleMail::make()
-->setTo($email, $name)
-->setSubject($subject)
-->setMessage($message)
-->send());
-die;
+// $fromEmail = 'info@.mailtrap.io';
+// $fromName = 'Admin';
+
+// $subject = 'Офигенская тема';
+// $message = 'Привет, это тестовая страница';
+
+// d(SimpleMail::make()
+// ->setTo($email, $name)
+// ->setSubject($subject)
+// ->setMessage($message)
+// ->send());
+// die;
 
 
 
